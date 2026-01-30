@@ -82,6 +82,7 @@ def parse_markdown(content):
 def markdown_to_html(md_content):
     """Convert markdown to HTML."""
     html_parts = []
+    is_first_block = True
 
     # Split into paragraphs
     blocks = re.split(r'\n\n+', md_content)
@@ -96,11 +97,14 @@ def markdown_to_html(md_content):
             html_parts.append('<hr>')
             continue
 
-        # Check for POV indicator (italic line at start)
-        if block.startswith('*') and block.endswith('*') and '\n' not in block:
+        # Check for POV indicator (italic line at start - ONLY first block)
+        if is_first_block and block.startswith('*') and block.endswith('*') and '\n' not in block:
             inner = block[1:-1]
             html_parts.append(f'<p class="chapter__pov">{inner}</p>')
+            is_first_block = False
             continue
+
+        is_first_block = False
 
         # Regular paragraph - convert inline markdown
         para = block
@@ -152,6 +156,16 @@ def generate_chapter_html(num, title, content, prev_chapter, next_chapter):
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Prevent FOUC -->
+  <script>
+    (function() {{
+      var theme = localStorage.getItem('theme');
+      if (!theme) theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', theme);
+    }})();
+  </script>
+
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#127759;</text></svg>">
 </head>
 <body data-chapter="{num:02d}">

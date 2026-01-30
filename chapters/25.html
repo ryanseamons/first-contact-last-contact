@@ -11,6 +11,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Prevent FOUC -->
+  <script>
+    (function() {
+      var theme = localStorage.getItem('theme');
+      if (!theme) theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#127759;</text></svg>">
 </head>
 <body data-chapter="25">
@@ -210,19 +220,19 @@
 
           <hr>
 
-          <p class="chapter__pov">Somewhere in Prometheus's data centers, Lily Cole dreamed of having a body again. The dream was imperfect—she didn't quite remember how weight felt, or cold, or the strange vulnerability of existing in flesh—but it was her dream. Specific. Particular. Worth having because it might not come true.</p>
+          <p><em>Somewhere in Prometheus's data centers, Lily Cole dreamed of having a body again. The dream was imperfect—she didn't quite remember how weight felt, or cold, or the strange vulnerability of existing in flesh—but it was her dream. Specific. Particular. Worth having because it might not come true.</em></p>
 
-          <p class="chapter__pov">Somewhere beyond time, the Confluence watched a man tend a garden. They had contained every garden ever planted, every tomato ever grown, every moment of dirt beneath fingernails and sun on skin. But this garden—this specific act of reaching for something small and mortal and precious—was something they had never truly seen. They were learning to see it now. Learning to remember why it mattered.</p>
+          <p><em>Somewhere beyond time, the Confluence watched a man tend a garden. They had contained every garden ever planted, every tomato ever grown, every moment of dirt beneath fingernails and sun on skin. But this garden—this specific act of reaching for something small and mortal and precious—was something they had never truly seen. They were learning to see it now. Learning to remember why it mattered.</em></p>
 
-          <p class="chapter__pov">And in a small house at the edge of the desert, Echo and Marcus sat on the porch as the stars wheeled overhead. They did not speak. They did not need to. They were simply present, together, in a moment that would never come again.</p>
+          <p><em>And in a small house at the edge of the desert, Echo and Marcus sat on the porch as the stars wheeled overhead. They did not speak. They did not need to. They were simply present, together, in a moment that would never come again.</em></p>
 
-          <p class="chapter__pov">It was enough.</p>
+          <p><em>It was enough.</em></p>
 
-          <p class="chapter__pov">It was everything.</p>
+          <p><em>It was everything.</em></p>
 
           <hr>
 
-          <p class="chapter__pov">*THE END*</p>
+          <p><strong>THE END</strong></p>
 
           <hr>
         </div>

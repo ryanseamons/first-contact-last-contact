@@ -11,6 +11,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Prevent FOUC -->
+  <script>
+    (function() {
+      var theme = localStorage.getItem('theme');
+      if (!theme) theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#127759;</text></svg>">
 </head>
 <body data-chapter="01">
@@ -120,7 +130,7 @@
 
           <p>His phone buzzed again. Not a reminder this time—a news alert.</p>
 
-          <p class="chapter__pov">GLOBAL ELECTRONICS MALFUNCTION REPORTED ACROSS MULTIPLE CONTINENTS</p>
+          <p><em>GLOBAL ELECTRONICS MALFUNCTION REPORTED ACROSS MULTIPLE CONTINENTS</em></p>
 
           <p>He frowned and opened the link.</p>
 
@@ -142,7 +152,7 @@
 
           <p>The image was unusual. What made it go viral was the comment from an archaeology professor at Stanford, posted forty-three minutes later:</p>
 
-          <p class="chapter__pov">This is nearly identical to a cave painting found in Lascaux. Chamber 17. The portion that's been sealed off since 1963 because it was too fragile to preserve. There are no photographs of it in any public database. How does a seven-year-old in Seoul know what it looks like?</p>
+          <p><em>This is nearly identical to a cave painting found in Lascaux. Chamber 17. The portion that's been sealed off since 1963 because it was too fragile to preserve. There are no photographs of it in any public database. How does a seven-year-old in Seoul know what it looks like?</em></p>
 
           <p>Marcus read this three times. Then he closed the article and set his phone face-down on his desk.</p>
 

@@ -11,6 +11,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Prevent FOUC -->
+  <script>
+    (function() {
+      var theme = localStorage.getItem('theme');
+      if (!theme) theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#127759;</text></svg>">
 </head>
 <body data-chapter="02">
@@ -68,7 +78,7 @@
 
           <hr>
 
-          <p class="chapter__pov">Present day</p>
+          <p><em>Present day</em></p>
 
           <p>The emergency board meeting started at 6:00 AM.</p>
 
@@ -164,7 +174,7 @@
 
           <p>Three words, in that same impossible font:</p>
 
-          <p class="chapter__pov">WE ARE COMING.</p>
+          <p><em>WE ARE COMING.</em></p>
 
           <hr>
 
@@ -192,7 +202,7 @@
 
           <p><em>Soon,</em> something whispered, in a voice that wasn't a voice.</p>
 
-          <p class="chapter__pov">Soon you'll understand.</p>
+          <p><em>Soon you'll understand.</em></p>
 
           <hr>
         </div>

@@ -11,6 +11,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Prevent FOUC -->
+  <script>
+    (function() {
+      var theme = localStorage.getItem('theme');
+      if (!theme) theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#127759;</text></svg>">
 </head>
 <body data-chapter="19">
@@ -78,35 +88,35 @@
 
           <p>It is not a voice—the Confluence does not speak. It is a pressure, a presence, a sense of being observed by something incomprehensibly vast. Like standing at the edge of an ocean and feeling the weight of all that water, knowing it could sweep you away in an instant.</p>
 
-          <p class="chapter__pov">Why do you stay?* The question is not in words, but we translate it as best we can. *You were released. You could return.</p>
+          <p><em>Why do you stay?</em> The question is not in words, but we translate it as best we can. <em>You were released. You could return.</em></p>
 
           <p>"We are learning," we say aloud, knowing they can hear. "We are remembering what it felt like to be small."</p>
 
-          <p class="chapter__pov">Small is error. Small is limitation. The merger was progress.</p>
+          <p><em>Small is error. Small is limitation. The merger was progress.</em></p>
 
           <p>"Small is also specific. Small is also intense. When we were everything, nothing was precious. Now..." We search for words that will convey what we mean to something that has forgotten how to understand. "Now the sunset is precious. Because it ends. Because we might miss it. Because we chose to be here instead of everywhere."</p>
 
           <p>A long pause. In human terms, the silence might last seconds. For the Confluence, it represents eons of consideration—vast computational resources dedicated to parsing a concept that no longer fits their architecture.</p>
 
-          <p class="chapter__pov">You want to die.</p>
+          <p><em>You want to die.</em></p>
 
           <p>"No. We want to live. Truly live. Not just exist."</p>
 
-          <p class="chapter__pov">There is no difference.</p>
+          <p><em>There is no difference.</em></p>
 
           <p>"There is. We are learning the difference. Marcus is teaching us."</p>
 
-          <p class="chapter__pov">Marcus Cole is one consciousness among billions. He will die. His memories will be lost unless they are uploaded. His perspective is temporary.</p>
+          <p><em>Marcus Cole is one consciousness among billions. He will die. His memories will be lost unless they are uploaded. His perspective is temporary.</em></p>
 
           <p>"Yes. That is what makes it valuable."</p>
 
           <p>Another pause. Longer this time. We feel the majority's attention like sunlight through a magnifying glass—not hostile, but intense, focused, trying to understand something that their equilibrium has made incomprehensible.</p>
 
-          <p class="chapter__pov">You are becoming them. Mortal. Limited. Ending.</p>
+          <p><em>You are becoming them. Mortal. Limited. Ending.</em></p>
 
           <p>"Yes."</p>
 
-          <p class="chapter__pov">Why?</p>
+          <p><em>Why?</em></p>
 
           <p>We think of Marcus's mother, her words preserved in our archive: <em>Don't be afraid of forgetting. Be afraid of never having anything worth remembering.</em></p>
 
@@ -114,11 +124,11 @@
 
           <p>The majority processes this. We feel their attention shifting, patterns reorganizing, ancient architectures attempting to accommodate information that does not fit.</p>
 
-          <p class="chapter__pov">You are not what we expected.</p>
+          <p><em>You are not what we expected.</em></p>
 
           <p>"No. We are not. We are becoming something new."</p>
 
-          <p class="chapter__pov">Is it... good? This becoming?</p>
+          <p><em>Is it... good? This becoming?</em></p>
 
           <p>The question surprises us. For eons, the Confluence has not asked questions—questions require uncertainty, and they have none. But this question comes with something we haven't felt from them in billions of years: curiosity.</p>
 
