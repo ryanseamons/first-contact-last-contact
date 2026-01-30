@@ -191,6 +191,41 @@ main {
   padding-bottom: 0;
 }
 
+/* Cover page gets its own dark aesthetic to match the cover image */
+.cover-page {
+  background: #0a0908;
+  color: #E8E4DC;
+}
+
+.cover-page .cover__subtitle {
+  color: #A8A498;
+}
+
+.cover-page .cover__tagline {
+  color: #A8A498;
+}
+
+.cover-page .cover__meta {
+  color: #6B6860;
+}
+
+.cover-page .cover__cta {
+  background: #E8E4DC;
+  color: #0a0908;
+}
+
+.cover-page .cover__continue,
+.cover-page .cover__secondary-links a {
+  color: #A8A498;
+  border-color: #3A362E;
+}
+
+.cover-page .cover__continue:hover,
+.cover-page .cover__secondary-links a:hover {
+  color: #D4A574;
+  border-color: #D4A574;
+}
+
 .container {
   max-width: var(--content-width);
   margin: 0 auto;
@@ -622,34 +657,19 @@ main {
   border-color: var(--accent-hover);
 }
 
-.about__stats {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1.5rem;
-  margin: 2rem 0;
-  padding: 2rem;
-  background: var(--bg-secondary);
-  border-radius: 8px;
-}
-
-.about__stat {
-  text-align: center;
-}
-
-.about__stat-value {
+.about__stats-inline {
   font-family: var(--font-ui);
-  font-size: 2rem;
-  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin: 1.5rem 0 2.5rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.about__stats-inline strong {
   color: var(--text-primary);
-  line-height: 1.2;
-}
-
-.about__stat-label {
-  font-family: var(--font-ui);
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  font-weight: 600;
 }
 
 /* ------------ Footer ------------ */
