@@ -30,27 +30,36 @@
   <meta property="og:title" content="First Contact, Last Contact">
   <meta property="og:description" content="A novel about humanity's future selves returning to ask an impossible question.">
   <meta property="og:type" content="book">
+  <meta property="og:image" content="images/cover.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="First Contact, Last Contact">
+  <meta name="twitter:description" content="A novel about humanity's future selves returning to ask an impossible question.">
+  <meta name="twitter:image" content="images/cover.jpg">
 </head>
 <body class="cover-page">
   <main>
     <section class="cover">
       <div class="cover__image">
-        <!-- Cover image placeholder - replace src when you have the image -->
-        <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:var(--text-muted);font-family:var(--font-ui);font-size:0.9rem;">
-          Cover Image
-        </div>
+        <img src="images/cover.jpg" alt="A lone figure stands in a vast space while an ethereal golden hand reaches down from above">
       </div>
 
       <h1 class="cover__title">First Contact, Last Contact</h1>
       <p class="cover__subtitle">A Novel</p>
+      <p class="cover__tagline">They came from the end of time to ask us one question:<br>Is existence worth the pain of wanting?</p>
 
       <p class="cover__meta">25 chapters · ~55,000 words · 4-5 hour read</p>
 
-      <a href="chapters/01.html" class="cover__cta">
+      <a href="chapters/01.html" class="cover__cta" id="main-cta">
         Begin Reading
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M5 12h14M12 5l7 7-7 7"/>
         </svg>
+      </a>
+
+      <a href="#" class="cover__continue" id="continue-reading" style="display:none;">
+        Continue from Chapter <span id="continue-chapter"></span>
       </a>
 
       <div class="cover__secondary-links">
@@ -61,5 +70,29 @@
   </main>
 
   <script src="js/main.js"></script>
+  <script>
+    // Show "Continue Reading" if user has progress
+    (function() {
+      var CHAPTERS = ['Glitch','Prometheus','Echoes','Coalescence','First Contact','The Architect','Lily','The Splinter','The Method','The Fade','Confession','The Fracture','Divide','Countermeasure','Ruth','The Vote','Pressure','The Call','Observer','Severance','Vigil','Contact','The Weight','Goodbye','First Light'];
+      try {
+        var progress = JSON.parse(localStorage.getItem('fcls_reading_progress')) || {};
+        var lastRead = 0;
+        for (var ch in progress) {
+          var num = parseInt(ch, 10);
+          if (progress[ch].read && num > lastRead) lastRead = num;
+        }
+        if (lastRead > 0 && lastRead < 25) {
+          var nextChapter = lastRead + 1;
+          var continueLink = document.getElementById('continue-reading');
+          var chapterSpan = document.getElementById('continue-chapter');
+          if (continueLink && chapterSpan) {
+            continueLink.href = 'chapters/' + String(nextChapter).padStart(2, '0') + '.html';
+            chapterSpan.textContent = nextChapter + ': ' + CHAPTERS[nextChapter - 1];
+            continueLink.style.display = 'inline-block';
+          }
+        }
+      } catch(e) {}
+    })();
+  </script>
 </body>
 </html>
