@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 2: Prometheus · First Contact, Last Contact</title>
+  <meta name="description" content="Chapter 2 of First Contact, Last Contact.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#127759;</text></svg>">
+</head>
+<body data-chapter="02">
+  <div class="progress-bar"><div class="progress-bar__fill"></div></div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../index.html" class="site-title">First Contact, Last Contact</a>
+      <div class="header-controls">
+        <nav class="chapter-nav">
+          <a href="01.html" class="chapter-nav__link">← Prev</a>
+          <a href="../toc.html">Contents</a>
+          <a href="03.html" class="chapter-nav__link">Next →</a>
+        </nav>
+        <button class="theme-toggle" aria-label="Toggle theme"></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <article class="chapter">
+        <header class="chapter__header">
+          <p class="chapter__number">Chapter 2</p>
+          <h1 class="chapter__title">Prometheus</h1>
+          <div class="chapter__meta">
+            <span data-reading-time>Calculating...</span>
+          </div>
+        </header>
+
+        <div class="chapter__content">
+          <p class="chapter__pov">Eighteen years earlier</p>
+
+          <p>The woman in the hospital bed didn't recognize her own son.</p>
+
+          <p>Marcus stood in the doorway, flowers in hand—daffodils, her favorite—and watched his mother's eyes move across his face with polite, empty curiosity. The same eyes that had checked his homework, had narrowed at his teenage rebellions, had welled with tears at his graduation. Now they held nothing but the vague interest of a stranger assessing a stranger.</p>
+
+          <p>"Hello," Ruth said. "Are you the new doctor?"</p>
+
+          <p>"No, Mom. It's me. Marcus."</p>
+
+          <p>A small frown. Processing. The machinery of her mind grinding through corrupted files, searching for a match it wouldn't find. "Marcus," she repeated, testing the word. "That's a nice name. Biblical, isn't it?"</p>
+
+          <p>"It's the name you gave me."</p>
+
+          <p>"Did I?" She smiled, and for a moment—just a moment—something flickered behind her eyes. Recognition or its ghost. "I must have had good taste."</p>
+
+          <p>The doctors called it early-onset Alzheimer's, aggressive variant. She was fifty-eight years old, and her brain was eating itself from the inside out. The plaques and tangles, they explained, were advancing faster than any treatment could address. She might have two years. She might have six months. The disease didn't follow schedules.</p>
+
+          <p>Marcus had built his first company on machine learning—pattern recognition, predictive analytics, the mathematics of making sense from noise. He'd sold it for enough money to never work again. Instead, he'd started working harder than ever, pulling together the best neuroscientists, the most creative engineers, the kind of minds that saw impossible problems as interesting challenges.</p>
+
+          <p>"We're going to figure this out," he told his mother, that day in the hospital. "I'm going to find a way to save you."</p>
+
+          <p>She looked at him with those empty, curious eyes. "That's very kind of you, doctor."</p>
+
+          <hr>
+
+          <p class="chapter__pov">Present day</p>
+
+          <p>The emergency board meeting started at 6:00 AM.</p>
+
+          <p>Marcus had slept three hours, interrupted by dreams he couldn't quite remember—something about corridors, something about voices. His phone had been silent since the cryptic message the night before. He'd run diagnostics, checked for malware, even had his security team pull the device apart. They found nothing. No record of the message in any log. No evidence it had ever existed.</p>
+
+          <p>He'd almost convinced himself he'd hallucinated it.</p>
+
+          <p>Then he'd seen the overnight news.</p>
+
+          <p>The boardroom was full by the time he arrived—fifteen faces arranged around the table, some in person, some floating in holographic displays. The neural-link early adopters had their temples glowing faintly blue, their feeds active, processing information faster than unaugmented humans could follow.</p>
+
+          <p>"The stock is down 8% in pre-market trading," said Diane Okonkwo, the CFO. "And that's before the Asian markets open."</p>
+
+          <p>"What's the exposure?" Marcus asked.</p>
+
+          <p>"Direct? Minimal. The glitches aren't affecting our upload servers or preservation systems. But the neural-link integration—the beta cohort is reporting anomalies."</p>
+
+          <p>"What kind of anomalies?"</p>
+
+          <p>Okonkwo hesitated. On the wall display, a video began playing: a man in his thirties, speaking directly to the camera. His temple glowed blue.</p>
+
+          <p>"I keep seeing things," the man said. "Not hallucinations—more like memories. But they're not my memories. There's this place—I don't know where, I've never been there—but I know what the air smells like. I know how the light hits the water in the morning. I know the name of a woman who died there, even though I don't speak the language."</p>
+
+          <p>The video cut to another user. A woman this time, older. "It's like being two people. I'm me, and I'm also... someone else. Or everyone else. I don't know how to explain it."</p>
+
+          <p>Then another. And another. Neural-link users around the world, all reporting the same phenomenon: foreign memories bleeding into their own consciousness. Knowledge they shouldn't have. Emotions they hadn't earned.</p>
+
+          <p>"The beta cohort is panicking," Okonkwo said. "We've had forty-seven disconnection requests in the last six hours. If this spreads to the general user base—"</p>
+
+          <p>"It won't," Marcus said. He wasn't sure he believed it.</p>
+
+          <p>Chen Wei, head of the neural-link division, leaned forward. "We need to accelerate the integration timeline. Deploy the 2.0 firmware before the story spirals."</p>
+
+          <p>"The safety trials aren't complete."</p>
+
+          <p>"The safety trials are a liability shield. The technology works. If we wait, we lose market confidence."</p>
+
+          <p>"And if the 2.0 firmware makes this worse?"</p>
+
+          <p>Chen's smile was thin. "Then we have a different kind of problem."</p>
+
+          <p>The argument circled for another hour. Marcus listened with half his attention, the other half still caught on the face he'd seen on his phone. Ruth. Clear-eyed, present, <em>herself</em> in a way she hadn't been for years before she died.</p>
+
+          <p>His phone buzzed. Text from his assistant: <em>Press call in 20. They're asking about the glitches.</em></p>
+
+          <p>He stepped out of the boardroom and found a quiet corner.</p>
+
+          <hr>
+
+          <p>The press call was supposed to be routine. Quarterly update on upload rates, safety statistics, the usual corporate reassurance that death was now optional and Prometheus was there to prove it.</p>
+
+          <p>Instead, Marcus found himself fielding questions about the Glitch.</p>
+
+          <p>"Mr. Cole, Prometheus neural-link users report experiencing foreign memories—memories that seem to predate their own births. Can you explain this?"</p>
+
+          <p>"We're investigating the anomalies. At this time, there's no indication that Prometheus systems are the source of the disruption."</p>
+
+          <p>"But the neural-link connects directly to the brain. If external data is reaching users—"</p>
+
+          <p>"Our systems are secure. The architecture was designed to be unidirectional. Information flows from the user to our servers for backup and preservation. There is no channel for external content to reach the user."</p>
+
+          <p>"Then how do you explain what users are experiencing?"</p>
+
+          <p>Marcus hesitated. The honest answer was: I don't. The diplomatic answer was: We're looking into it. The Marcus Cole answer—the polished, confident, have-the-situation-under-control answer—was neither.</p>
+
+          <p>"The human brain is the most complex system in the known universe," he said. "Under stress, it can generate experiences that feel external but originate internally. Mass suggestion, pattern matching, confirmation bias—these are well-documented phenomena. We're working with neurologists and psychologists to understand the current situation."</p>
+
+          <p>A journalist in the front row raised her hand. Young, sharp-eyed, the kind who asked questions that didn't have good answers.</p>
+
+          <p>"Mr. Cole, you founded Prometheus after your mother's death from Alzheimer's. Your stated mission was to ensure that no one would have to lose a loved one to cognitive decline. But critics argue that your technology doesn't actually preserve consciousness—it creates a copy. That the original person dies the moment the upload begins, and what remains is a simulation that believes it's them."</p>
+
+          <p>The room went quiet. This was the question that never quite went away—the one that lived in the comment sections, the philosophy papers, the late-night anxiety spirals of anyone who'd ever considered uploading.</p>
+
+          <p>"The continuity of consciousness is a complex topic," Marcus said. "Our research suggests—"</p>
+
+          <p>"Your research is funded by your company, which profits from people believing the upload is continuous. How can we trust it?"</p>
+
+          <p>"We've had independent verification—"</p>
+
+          <p>"From institutions that receive Prometheus grants." The journalist leaned forward. "Mr. Cole, let me ask you directly: If consciousness can be preserved—if death can be made optional—does death still mean anything? Or have you just made existence infinite and meaningless?"</p>
+
+          <p>The words hit harder than they should have. Meaningless. The same word that had surfaced, unbidden, in his mind every time he spoke to Lily. The same gnawing suspicion he couldn't name.</p>
+
+          <p>"Death means suffering," Marcus said. "It means loss. It means the permanent end of someone's story before they're ready for it to end. If we can prevent that—"</p>
+
+          <p>"But if the story never ends, is it still a story? Or is it just... existence?"</p>
+
+          <p>He didn't have an answer. He opened his mouth to deflect, to redirect, to deploy one of the practiced phrases that had gotten him through a decade of these conversations—</p>
+
+          <p>His phone buzzed. Not a notification pattern. That same rhythmic pulse from the night before.</p>
+
+          <p>He glanced at the screen.</p>
+
+          <p>Three words, in that same impossible font:</p>
+
+          <p class="chapter__pov">WE ARE COMING.</p>
+
+          <hr>
+
+          <p>By evening, the Glitch had a body count.</p>
+
+          <p>Not deaths—not directly. But a stock trader in Singapore had acted on information she couldn't have known, triggering a cascade that vaporized billions in market value. A pilot in Brazil had seen something through his neural-link—something that made him scream and grab for his eyes—and nearly crashed his plane. A hospital in Munich had its AI diagnostic system deliver test results six hours before the tests were administered, results that turned out to be accurate, results that no one could explain.</p>
+
+          <p>Marcus sat in his office and watched the footage of the Seoul girl's drawing again. The figure with the radiating lines. The cave painting that shouldn't exist in any database.</p>
+
+          <p>His phone sat on the desk, silent now. He'd disabled every connection, every antenna, every possible pathway for external data. It shouldn't be able to receive anything.</p>
+
+          <p>It shouldn't be able to show him his dead mother's face.</p>
+
+          <p>It shouldn't be able to display messages in fonts that didn't exist.</p>
+
+          <p>He picked it up anyway. Stared at the blank screen. Waited.</p>
+
+          <p>"What are you?" he asked the empty room. "What do you want?"</p>
+
+          <p>The phone remained silent.</p>
+
+          <p>But somewhere, in the back of his mind—in the place where neural-link data was supposed to flow only outward, never in—he felt something.</p>
+
+          <p>A presence. Vast. Patient. Waiting.</p>
+
+          <p><em>Soon,</em> something whispered, in a voice that wasn't a voice.</p>
+
+          <p class="chapter__pov">Soon you'll understand.</p>
+
+          <hr>
+        </div>
+
+        <footer class="chapter__footer">
+          <nav class="chapter-pagination">
+            <a href="01.html" class="chapter-pagination__link chapter-pagination__link--prev">
+            <span class="chapter-pagination__label">Previous Chapter</span>
+            <span class="chapter-pagination__title">Glitch</span>
+          </a>
+            <a href="03.html" class="chapter-pagination__link chapter-pagination__link--next">
+            <span class="chapter-pagination__label">Next Chapter</span>
+            <span class="chapter-pagination__title">Echoes</span>
+          </a>
+          </nav>
+        </footer>
+      </article>
+    </div>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
